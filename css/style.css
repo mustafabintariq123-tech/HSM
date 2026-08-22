@@ -545,6 +545,34 @@ section { padding: 100px 24px; }
 }
 
 /* ---------------------------------------------------------------------- */
+/* Trust strip — honest credibility signals in place of testimonials       */
+/* ---------------------------------------------------------------------- */
+
+.trust-strip { background: var(--navy-deep); padding: 72px 24px; }
+
+.trust-items { display: flex; gap: 40px; }
+
+.trust-item { flex: 1; text-align: center; }
+
+.trust-item .trust-label {
+  display: block;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 13px;
+  color: var(--gold);
+  margin-bottom: 10px;
+  letter-spacing: 0.02em;
+}
+
+.trust-item p { color: #C7CCDA; font-size: 14.5px; font-weight: 300; line-height: 1.6; }
+
+.trust-item p a { color: var(--gold-soft); }
+
+@media (max-width: 720px) {
+  .trust-items { flex-direction: column; gap: 32px; }
+}
+
+/* ---------------------------------------------------------------------- */
 /* Closing CTA                                                             */
 /* ---------------------------------------------------------------------- */
 
