@@ -136,72 +136,27 @@ h1, h2, h3, h4 {
 }
 
 /* ---------------------------------------------------------------------- */
-/* Logo (recreated wordmark — no image asset)                             */
+/* Logo (image wordmark)                                                  */
 /* ---------------------------------------------------------------------- */
 
-.logo-mark {
+.site-logo {
   display: inline-flex;
-  flex-direction: column;
   align-items: center;
-  background: var(--navy);
-  padding: 10px 22px;
 }
 
-.logo-mark .logo-hsm {
-  font-family: var(--font-display);
-  font-weight: 700;
-  color: var(--cream);
-  letter-spacing: 0.04em;
-  line-height: 1;
-}
-
-.logo-mark .logo-rule {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 4px;
-}
-
-.logo-mark .logo-rule::before,
-.logo-mark .logo-rule::after {
-  content: '';
-  width: 14px;
-  height: 1px;
-  background: var(--gold);
-}
-
-.logo-mark .logo-strategic {
-  font-family: var(--font-body);
-  font-weight: 500;
-  color: var(--gold);
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
+.site-logo .logo-img {
+  display: block;
+  width: auto;
 }
 
 /* nav-sized logo */
-.logo-mark.logo-sm {
-  padding: 6px 14px;
-}
-.logo-mark.logo-sm .logo-hsm { font-size: 18px; }
-.logo-mark.logo-sm .logo-rule::before,
-.logo-mark.logo-sm .logo-rule::after { width: 8px; }
-.logo-mark.logo-sm .logo-strategic { font-size: 8px; letter-spacing: 0.22em; }
+.site-logo.site-logo-sm .logo-img { height: 34px; }
 
 /* hero-sized logo */
-.logo-mark.logo-lg {
-  padding: 22px 56px;
-}
-.logo-mark.logo-lg .logo-hsm { font-size: 46px; }
-.logo-mark.logo-lg .logo-rule::before,
-.logo-mark.logo-lg .logo-rule::after { width: 22px; }
-.logo-mark.logo-lg .logo-strategic { font-size: 13px; }
+.site-logo.site-logo-lg .logo-img { height: 92px; }
 
 /* footer-sized logo */
-.logo-mark.logo-footer { padding: 8px 18px; }
-.logo-mark.logo-footer .logo-hsm { font-size: 20px; }
-.logo-mark.logo-footer .logo-rule::before,
-.logo-mark.logo-footer .logo-rule::after { width: 10px; }
-.logo-mark.logo-footer .logo-strategic { font-size: 9px; }
+.site-logo.site-logo-footer .logo-img { height: 42px; }
 
 /* ---------------------------------------------------------------------- */
 /* Header / Navigation                                                    */
@@ -311,7 +266,7 @@ h1, h2, h3, h4 {
 
 .hero-inner { position: relative; z-index: 1; max-width: 780px; margin: 0 auto; }
 
-.hero .logo-mark { margin-bottom: 36px; }
+.hero .site-logo { margin-bottom: 36px; }
 
 .hero .eyebrow { justify-content: center; }
 .hero .eyebrow::after { display: none; }
@@ -641,7 +596,7 @@ section { padding: 100px 24px; }
   border-bottom: 1px solid rgba(139, 146, 163, 0.2);
 }
 
-.footer-col .logo-mark { margin-bottom: 20px; }
+.footer-col .site-logo { margin-bottom: 20px; }
 
 .footer-col p {
   font-size: 14px;
