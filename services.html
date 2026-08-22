@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <style>
-  .service-detail { padding: 64px 0; border-bottom: 1px solid #E4E1D8; display: grid; grid-template-columns: 220px 1fr; gap: 48px; }
+  .service-detail { padding: 64px 0; border-bottom: 1px solid #E4E1D8; display: grid; grid-template-columns: 220px 1fr; gap: 48px; scroll-margin-top: 110px; }
   .service-detail:last-child { border-bottom: none; }
   .service-detail .tag { font-family: var(--font-display); font-style: italic; font-size: 15px; color: var(--gold); }
   .service-detail h3 { font-size: 22px; color: var(--navy-text); margin: 10px 0 0; }
@@ -32,7 +32,18 @@
     </a>
     <nav class="nav-links">
       <a href="index.html#what-we-do">What We Do</a>
-      <a href="services.html" class="active">Services</a>
+      <div class="nav-item">
+        <a href="services.html" class="active">Services <svg class="nav-caret" viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+        <div class="nav-dropdown">
+          <a href="services.html#origination">Deal Sourcing &amp; Origination</a>
+          <a href="services.html#screening">Screening &amp; Preliminary Analysis</a>
+          <a href="services.html#research">Market &amp; Industry Research</a>
+          <a href="services.html#valuation">Financial Modeling &amp; Valuation</a>
+          <a href="services.html#diligence">Due Diligence Support</a>
+          <a href="services.html#ic-support">Investment Memos &amp; IC Materials</a>
+          <a href="services.html" class="nav-dropdown-all">View All Services →</a>
+        </div>
+      </div>
       <a href="sectors.html">Who We Serve</a>
       <a href="insights.html">Insights</a>
       <a href="contact.html">Contact</a>
@@ -52,7 +63,7 @@
 <section class="section-white">
   <div class="container">
 
-    <div class="service-detail reveal">
+    <div class="service-detail reveal" id="origination">
       <div>
         <span class="tag">01 — Origination</span>
         <h3>Deal Sourcing &amp; Origination</h3>
@@ -68,7 +79,7 @@
       </div>
     </div>
 
-    <div class="service-detail reveal">
+    <div class="service-detail reveal" id="screening">
       <div>
         <span class="tag">02 — Screening</span>
         <h3>Screening &amp; Preliminary Analysis</h3>
@@ -84,7 +95,7 @@
       </div>
     </div>
 
-    <div class="service-detail reveal">
+    <div class="service-detail reveal" id="research">
       <div>
         <span class="tag">03 — Research</span>
         <h3>Market &amp; Industry Research</h3>
@@ -100,7 +111,7 @@
       </div>
     </div>
 
-    <div class="service-detail reveal">
+    <div class="service-detail reveal" id="valuation">
       <div>
         <span class="tag">04 — Valuation</span>
         <h3>Financial Modeling &amp; Valuation</h3>
@@ -116,7 +127,7 @@
       </div>
     </div>
 
-    <div class="service-detail reveal">
+    <div class="service-detail reveal" id="diligence">
       <div>
         <span class="tag">05 — Diligence</span>
         <h3>Due Diligence Support</h3>
@@ -132,7 +143,7 @@
       </div>
     </div>
 
-    <div class="service-detail reveal">
+    <div class="service-detail reveal" id="ic-support">
       <div>
         <span class="tag">06 — IC Support</span>
         <h3>Investment Memos &amp; IC Materials</h3>
