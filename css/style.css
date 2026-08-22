@@ -647,14 +647,14 @@ section { padding: 100px 24px; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 38px;
-  height: 38px;
+  width: 46px;
+  height: 46px;
   border: 1px solid rgba(139, 146, 163, 0.3);
   border-radius: 50%;
   transition: border-color 0.25s var(--ease), color 0.25s var(--ease);
 }
 
-.footer-icons a svg { width: 16px; height: 16px; }
+.footer-icons a svg { width: 20px; height: 20px; }
 
 .footer-icons a:hover { border-color: var(--gold-soft); }
 
