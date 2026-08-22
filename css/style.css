@@ -573,6 +573,45 @@ section { padding: 100px 24px; }
 }
 
 /* ---------------------------------------------------------------------- */
+/* Related Insights list                                                   */
+/* ---------------------------------------------------------------------- */
+
+.related-links { border-top: 1px solid #E4E1D8; }
+
+.related-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 20px 0;
+  border-bottom: 1px solid #E4E1D8;
+  text-decoration: none;
+  transition: padding-left 0.25s var(--ease);
+}
+
+.related-link:hover { padding-left: 8px; }
+
+.related-link-title { font-size: 16px; color: var(--navy-text); font-weight: 500; }
+
+.related-link-arrow { font-size: 13px; color: var(--gray); white-space: nowrap; transition: color 0.25s var(--ease); }
+
+.related-link:hover .related-link-arrow { color: var(--gold); }
+
+@media (max-width: 640px) {
+  .related-link { flex-direction: column; align-items: flex-start; gap: 6px; }
+}
+
+/* ---------------------------------------------------------------------- */
+/* 404 page                                                                 */
+/* ---------------------------------------------------------------------- */
+
+.btn-outline { background: transparent; color: var(--cream); border-color: rgba(254, 250, 229, 0.35); }
+
+.btn-outline:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-1px); }
+
+.notfound-actions { display: flex; gap: 16px; justify-content: center; margin-top: 36px; flex-wrap: wrap; }
+
+/* ---------------------------------------------------------------------- */
 /* Closing CTA                                                             */
 /* ---------------------------------------------------------------------- */
 
