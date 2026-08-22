@@ -77,6 +77,19 @@
     .lifecycle-step { display: flex; align-items: center; gap: 14px; text-align: left; }
     .lifecycle-step .step-num { margin: 0; flex-shrink: 0; }
   }
+
+  .exhibit-card { margin-top: 24px; padding: 20px 22px; background: var(--off-white); border: 1px solid #E4E1D8; border-radius: 4px; max-width: 480px; }
+  .exhibit-label { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gray); margin-bottom: 4px; display: block; }
+  .exhibit-title { font-size: 14px; color: var(--navy-text); font-weight: 500; margin-bottom: 14px; }
+  .exhibit-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .exhibit-table td { padding: 7px 0; color: #5B6472; font-weight: 300; }
+  .exhibit-table td:last-child { text-align: right; font-weight: 500; color: var(--navy-text); }
+  .exhibit-table tr.exhibit-total td { border-top: 1px solid var(--gold); padding-top: 10px; font-weight: 600; color: var(--navy-text); }
+  .exhibit-table tr.exhibit-total td:last-child { color: var(--gold); }
+  .exhibit-grid { width: 100%; border-collapse: collapse; font-size: 12px; text-align: center; }
+  .exhibit-grid th, .exhibit-grid td { padding: 8px 10px; border: 1px solid #E4E1D8; color: #5B6472; font-weight: 300; }
+  .exhibit-grid th { font-weight: 500; color: var(--navy-text); background: var(--white); font-size: 11px; }
+  .exhibit-grid td.base-case { background: var(--gold-soft); color: var(--navy-text); font-weight: 600; }
 </style>
 </head>
 <body>
@@ -217,6 +230,16 @@
           <li>Comparable company and precedent transaction analysis</li>
           <li>Discounted cash flow and standalone valuation support</li>
         </ul>
+        <div class="exhibit-card">
+          <span class="exhibit-label">Sample Exhibit, Illustrative</span>
+          <div class="exhibit-title">LBO Returns Sensitivity (5-Year IRR)</div>
+          <table class="exhibit-grid">
+            <tr><th></th><th>8.0x Exit</th><th>9.0x Exit</th><th>10.0x Exit</th></tr>
+            <tr><th>7.0x Entry</th><td>24%</td><td>27%</td><td>30%</td></tr>
+            <tr><th>8.0x Entry</th><td>19%</td><td class="base-case">22%</td><td>25%</td></tr>
+            <tr><th>9.0x Entry</th><td>15%</td><td>18%</td><td>21%</td></tr>
+          </table>
+        </div>
       </div>
     </div>
 
@@ -233,6 +256,18 @@
           <li>Data room review and document tracking</li>
           <li>Operational and commercial red-flag identification</li>
         </ul>
+        <div class="exhibit-card">
+          <span class="exhibit-label">Sample Exhibit, Illustrative</span>
+          <div class="exhibit-title">Normalized EBITDA Bridge</div>
+          <table class="exhibit-table">
+            <tr><td>Reported EBITDA</td><td>$4.2M</td></tr>
+            <tr><td>+ Non-recurring legal costs</td><td>+$0.3M</td></tr>
+            <tr><td>+ Owner compensation normalization</td><td>+$0.6M</td></tr>
+            <tr><td>+ One-time recall costs</td><td>+$0.4M</td></tr>
+            <tr><td>&minus; Non-arm's-length rent adjustment</td><td>&minus;$0.2M</td></tr>
+            <tr class="exhibit-total"><td>Adjusted EBITDA</td><td>$5.3M</td></tr>
+          </table>
+        </div>
       </div>
     </div>
 
