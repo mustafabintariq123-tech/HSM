@@ -635,6 +635,29 @@ section { padding: 100px 24px; }
 
 .footer-col ul li a:hover { color: var(--gold-soft); }
 
+.footer-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+}
+
+.footer-icons li { margin-bottom: 0; }
+
+.footer-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(139, 146, 163, 0.3);
+  border-radius: 50%;
+  transition: border-color 0.25s var(--ease), color 0.25s var(--ease);
+}
+
+.footer-icons a svg { width: 16px; height: 16px; }
+
+.footer-icons a:hover { border-color: var(--gold-soft); }
+
 .footer-bottom {
   display: flex;
   justify-content: space-between;
