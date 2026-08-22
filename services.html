@@ -61,6 +61,22 @@
   .service-detail ul li { position: relative; padding-left: 18px; margin-bottom: 8px; color: #5B6472; font-weight: 300; font-size: 15px; max-width: 640px; }
   .service-detail ul li::before { content: ''; position: absolute; left: 0; top: 9px; width: 6px; height: 1px; background: var(--gold); }
   @media (max-width: 720px) { .service-detail { grid-template-columns: 1fr; gap: 16px; } }
+
+  .lifecycle-section { padding-top: 72px; padding-bottom: 72px; }
+  .lifecycle-intro { max-width: 640px; margin: 0 auto 48px; text-align: center; }
+  .lifecycle-intro p { color: #5B6472; font-weight: 300; font-size: 16px; }
+  .lifecycle-flow { position: relative; display: flex; justify-content: space-between; gap: 8px; }
+  .lifecycle-line { position: absolute; top: 19px; left: 0; right: 0; height: 1px; background: #DCD8C8; z-index: 0; }
+  .lifecycle-step { position: relative; z-index: 1; flex: 1; text-align: center; text-decoration: none; padding: 0 4px; }
+  .lifecycle-step .step-num { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; margin: 0 auto 14px; border-radius: 50%; background: var(--off-white); border: 1px solid var(--gold); font-family: var(--font-display); font-style: italic; font-size: 13px; color: var(--gold); transition: background 0.25s var(--ease), color 0.25s var(--ease); }
+  .lifecycle-step .step-label { display: block; font-size: 13px; font-weight: 500; color: var(--navy-text); letter-spacing: 0.01em; }
+  .lifecycle-step:hover .step-num { background: var(--gold); color: var(--white); }
+  @media (max-width: 860px) {
+    .lifecycle-flow { flex-direction: column; gap: 24px; align-items: flex-start; }
+    .lifecycle-line { display: none; }
+    .lifecycle-step { display: flex; align-items: center; gap: 14px; text-align: left; }
+    .lifecycle-step .step-num { margin: 0; flex-shrink: 0; }
+  }
 </style>
 </head>
 <body>
@@ -99,6 +115,42 @@
   <div class="eyebrow-rule"></div>
   <h1>From origination to investment committee</h1>
   <p>Engage us for a single workstream or across the full deal lifecycle. Every deliverable is built to sit directly inside your process.</p>
+</section>
+
+<section class="section-off-white lifecycle-section">
+  <div class="container">
+    <div class="lifecycle-intro reveal">
+      <div class="eyebrow">Full Lifecycle Coverage</div>
+      <p>Six services, one continuous line of coverage across a transaction, from the first target list to the memo in front of your investment committee.</p>
+    </div>
+    <div class="lifecycle-flow reveal">
+      <div class="lifecycle-line"></div>
+      <a href="#origination" class="lifecycle-step">
+        <span class="step-num">01</span>
+        <span class="step-label">Origination</span>
+      </a>
+      <a href="#screening" class="lifecycle-step">
+        <span class="step-num">02</span>
+        <span class="step-label">Screening</span>
+      </a>
+      <a href="#research" class="lifecycle-step">
+        <span class="step-num">03</span>
+        <span class="step-label">Research</span>
+      </a>
+      <a href="#valuation" class="lifecycle-step">
+        <span class="step-num">04</span>
+        <span class="step-label">Valuation</span>
+      </a>
+      <a href="#diligence" class="lifecycle-step">
+        <span class="step-num">05</span>
+        <span class="step-label">Diligence</span>
+      </a>
+      <a href="#ic-support" class="lifecycle-step">
+        <span class="step-num">06</span>
+        <span class="step-label">IC Support</span>
+      </a>
+    </div>
+  </div>
 </section>
 
 <section class="section-white">
