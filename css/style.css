@@ -545,6 +545,43 @@ section { padding: 100px 24px; }
   max-width: 620px;
 }
 
+/* Cost of Capacity table — stacked cards on mobile instead of horizontal scroll */
+@media (max-width: 640px) {
+  .compare-wrap { overflow-x: visible; border: none; border-radius: 0; }
+  .compare-table { min-width: 0; }
+  .compare-table thead { display: none; }
+  .compare-table, .compare-table tbody, .compare-table tr, .compare-table td {
+    display: block;
+    width: 100%;
+  }
+  .compare-table tr {
+    margin-bottom: 16px;
+    border: 1px solid #E4E1D8;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .compare-table tr:last-child { margin-bottom: 0; }
+  .compare-table td {
+    padding: 12px 18px;
+    border-bottom: 1px solid #E4E1D8;
+  }
+  .compare-table tr td:last-child { border-bottom: none; }
+  .compare-table td.row-label {
+    background: var(--off-white);
+    font-size: 12px;
+  }
+  .compare-table td[data-label]::before {
+    content: attr(data-label);
+    display: block;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-bottom: 4px;
+  }
+  .compare-table td.highlight[data-label]::before { color: var(--navy-deep); }
+}
+
 /* ---------------------------------------------------------------------- */
 /* Services — 2x3 card grid                                                */
 /* ---------------------------------------------------------------------- */
