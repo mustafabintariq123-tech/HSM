@@ -307,6 +307,67 @@
   </div>
 </section>
 
+<!-- What Would You Actually Save Calculator -->
+<section class="section-navy">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">See Your Own Numbers</div>
+      <h2>What Would You Actually Save?</h2>
+      <p>Adjust the assumptions to your own market and deal flow. This estimates the gap between a full-time analyst hire and engaging HSM Strategic only when a deal is live.</p>
+    </div>
+
+    <div class="calc-panel reveal">
+      <div class="calc-inputs">
+        <div class="calc-field">
+          <label>Fully-loaded analyst salary <span class="calc-val" id="calcSalaryVal">$120,000</span></label>
+          <input type="range" id="calcSalary" min="70000" max="200000" step="5000" value="120000">
+          <div class="calc-hint">Base salary plus benefits, payroll tax, and overhead</div>
+        </div>
+
+        <div class="calc-field">
+          <label>Months per year the role sits idle <span class="calc-val" id="calcIdleVal">4 mo</span></label>
+          <input type="range" id="calcIdle" min="0" max="10" step="1" value="4">
+          <div class="calc-hint">Time between live deals with no research or diligence work to do</div>
+        </div>
+
+        <div class="calc-field">
+          <label>Workstreams needing support per year <span class="calc-val" id="calcCountVal">4</span></label>
+          <input type="range" id="calcCount" min="1" max="12" step="1" value="4">
+          <div class="calc-hint">Screening, modeling, or diligence engagements you'd hand off</div>
+        </div>
+
+        <div class="calc-field">
+          <label>Estimated cost per engagement <span class="calc-val" id="calcFeeVal">$8,000</span></label>
+          <input type="range" id="calcFee" min="2000" max="20000" step="500" value="8000">
+          <div class="calc-hint">Your own estimate — adjust to the scope you have in mind</div>
+        </div>
+      </div>
+
+      <div class="calc-results">
+        <div class="calc-stat-label">Estimated Annual Savings</div>
+        <div class="calc-stat-value" id="calcSavings">$—</div>
+        <div class="calc-stat-sub" id="calcSavingsPct">— less than a full-time hire</div>
+
+        <div class="calc-breakdown">
+          <div class="calc-col">
+            <div class="calc-k">In-House Hire</div>
+            <div class="calc-v" id="calcInHouseCost">$—</div>
+          </div>
+          <div class="calc-col">
+            <div class="calc-k">HSM Strategic</div>
+            <div class="calc-v" id="calcHsmCost">$—</div>
+          </div>
+        </div>
+
+        <div class="calc-disclaimer">Illustrative estimate based on the assumptions above, not a quote. Actual costs depend on scope and engagement structure.</div>
+        <div class="calc-cta">
+          <a href="contact.html" class="btn btn-primary">Get An Estimate For Your Situation</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Who We Work With -->
 <section class="section-off-white">
   <div class="container">
@@ -400,6 +461,54 @@
   </div>
 </footer>
 
+<script>
+  (function () {
+    const salary = document.getElementById('calcSalary');
+    const idle = document.getElementById('calcIdle');
+    const count = document.getElementById('calcCount');
+    const fee = document.getElementById('calcFee');
+    if (!salary || !idle || !count || !fee) return;
+
+    const salaryVal = document.getElementById('calcSalaryVal');
+    const idleVal = document.getElementById('calcIdleVal');
+    const countVal = document.getElementById('calcCountVal');
+    const feeVal = document.getElementById('calcFeeVal');
+
+    const savingsEl = document.getElementById('calcSavings');
+    const savingsPctEl = document.getElementById('calcSavingsPct');
+    const inHouseCostEl = document.getElementById('calcInHouseCost');
+    const hsmCostEl = document.getElementById('calcHsmCost');
+
+    function money(n) {
+      return '$' + Math.round(n).toLocaleString('en-US');
+    }
+
+    function recalc() {
+      const salaryN = Number(salary.value);
+      const idleN = Number(idle.value);
+      const countN = Number(count.value);
+      const feeN = Number(fee.value);
+
+      salaryVal.textContent = money(salaryN);
+      idleVal.textContent = idleN + ' mo';
+      countVal.textContent = countN;
+      feeVal.textContent = money(feeN);
+
+      const inHouseCost = salaryN; // full salary regardless of idle time
+      const hsmCost = countN * feeN;
+      const savings = Math.max(inHouseCost - hsmCost, 0);
+      const pct = inHouseCost > 0 ? (savings / inHouseCost) * 100 : 0;
+
+      inHouseCostEl.textContent = money(inHouseCost) + '/yr';
+      hsmCostEl.textContent = money(hsmCost) + '/yr';
+      savingsEl.textContent = money(savings);
+      savingsPctEl.textContent = Math.round(pct) + '% less than a full-time hire, based on ' + idleN + ' idle month' + (idleN === 1 ? '' : 's') + '/year';
+    }
+
+    [salary, idle, count, fee].forEach(el => el.addEventListener('input', recalc));
+    recalc();
+  })();
+</script>
 <script src="js/main.js"></script>
 </body>
 </html>
