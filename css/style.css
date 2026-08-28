@@ -448,6 +448,25 @@ section { padding: 100px 24px; }
   font-weight: 300;
 }
 
+/* .tile-grid-8: eight-tile variant (homepage Why HSM Strategic), 4 cols x 2 rows */
+.tile-grid-8 { grid-template-columns: repeat(4, 1fr); }
+.tile-grid-8 .tile:nth-child(4n) { border-right: none; }
+.tile-grid-8 .tile:nth-child(-n+4) { border-bottom: 1px solid #E4E1D8; }
+
+@media (max-width: 900px) {
+  .tile-grid.tile-grid-8 { grid-template-columns: repeat(2, 1fr); }
+  .tile-grid-8 .tile:nth-child(4n) { border-right: 1px solid #E4E1D8; }
+  .tile-grid-8 .tile:nth-child(2n) { border-right: none; }
+  .tile-grid-8 .tile:nth-child(-n+4) { border-bottom: 1px solid #E4E1D8; }
+  .tile-grid-8 .tile:nth-last-child(-n+2) { border-bottom: none; }
+}
+
+@media (max-width: 640px) {
+  .tile-grid.tile-grid-8 { grid-template-columns: 1fr; }
+  .tile-grid-8 .tile { border-right: none; border-bottom: 1px solid #E4E1D8; }
+  .tile-grid-8 .tile:last-child { border-bottom: none; }
+}
+
 /* ---------------------------------------------------------------------- */
 /* Cost of Capacity — comparison table                                     */
 /* ---------------------------------------------------------------------- */
