@@ -640,6 +640,55 @@ section { padding: 100px 24px; }
   margin-bottom: 28px;
 }
 
+.pricing-definition {
+  border-top: 1px solid rgba(254, 250, 229, 0.12);
+  padding-top: 24px;
+  margin-bottom: 28px;
+}
+
+.pricing-definition-k {
+  font-family: var(--font-body);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gray);
+  margin-bottom: 10px;
+}
+
+.pricing-definition p {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--gray);
+  margin: 0 0 16px 0;
+}
+
+.pricing-definition ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pricing-definition li {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--cream);
+  padding-left: 16px;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.pricing-definition li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--gold-soft);
+}
+
+.pricing-definition li strong {
+  color: var(--gold-soft);
+  font-weight: 500;
+}
+
 .pricing-row {
   display: flex;
   gap: 32px;
