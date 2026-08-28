@@ -438,6 +438,14 @@ section { padding: 100px 24px; }
   font-size: 14px;
   font-weight: 600;
   color: var(--navy-text);
+  margin-bottom: 8px;
+}
+
+.tile p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #5B6472;
+  font-weight: 300;
 }
 
 /* ---------------------------------------------------------------------- */
