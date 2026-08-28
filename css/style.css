@@ -612,6 +612,80 @@ section { padding: 100px 24px; }
 }
 
 /* ---------------------------------------------------------------------- */
+/* Pricing — services page                                                 */
+/* ---------------------------------------------------------------------- */
+
+.pricing-wrap { max-width: 760px; }
+
+.pricing-panel {
+  background: var(--navy);
+  border: 1px solid rgba(201, 166, 89, 0.25);
+  border-radius: 2px;
+  padding: 40px;
+}
+
+.pricing-lead {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--cream);
+  margin-bottom: 16px;
+}
+
+.pricing-lead strong { color: var(--gold-soft); }
+
+.pricing-sub {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--gray);
+  margin-bottom: 28px;
+}
+
+.pricing-row {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  border-top: 1px solid rgba(254, 250, 229, 0.12);
+  padding-top: 24px;
+  margin-bottom: 28px;
+}
+
+.pricing-item { flex: 1; min-width: 180px; }
+
+.pricing-k {
+  font-family: var(--font-body);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gray);
+  margin-bottom: 6px;
+}
+
+.pricing-v {
+  font-size: 15px;
+  color: var(--cream);
+  line-height: 1.5;
+}
+
+.pricing-cta {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.pricing-cta-secondary {
+  font-size: 13px;
+  color: var(--gold-soft);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(201, 166, 89, 0.5);
+}
+
+@media (max-width: 560px) {
+  .pricing-panel { padding: 26px; }
+  .pricing-row { flex-direction: column; gap: 18px; }
+}
+
+/* ---------------------------------------------------------------------- */
 /* Cost of Capacity — comparison table                                     */
 /* ---------------------------------------------------------------------- */
 
