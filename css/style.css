@@ -715,6 +715,35 @@ section { padding: 100px 24px; }
   line-height: 1.5;
 }
 
+.pricing-guarantee {
+  border-top: 1px solid rgba(254, 250, 229, 0.12);
+  padding-top: 24px;
+  margin-bottom: 28px;
+}
+
+.pricing-guarantee-k {
+  font-family: var(--font-body);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gray);
+  margin-bottom: 10px;
+}
+
+.pricing-guarantee p {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--gray);
+  margin: 0 0 12px 0;
+}
+
+.pricing-guarantee p:last-child { margin-bottom: 0; }
+
+.pricing-guarantee p strong {
+  color: var(--gold-soft);
+  font-weight: 500;
+}
+
 .pricing-cta {
   display: flex;
   align-items: center;
