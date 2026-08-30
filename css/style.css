@@ -1,5 +1,5 @@
 /* ==========================================================================
-   HSM Strategic — Shared Stylesheet
+   HSM Strategic - Shared Stylesheet
    Boutique investment-banking aesthetic: navy + cream, restrained gold accent
    ========================================================================== */
 
@@ -371,7 +371,7 @@ section { padding: 100px 24px; }
 .section-navy .section-head p { color: var(--gray); }
 
 /* ---------------------------------------------------------------------- */
-/* What We Do — three column                                              */
+/* What We Do - three column                                              */
 /* ---------------------------------------------------------------------- */
 
 .numbered-grid {
@@ -405,7 +405,7 @@ section { padding: 100px 24px; }
 }
 
 /* ---------------------------------------------------------------------- */
-/* Why HSM — icon tile grid                                                */
+/* Why HSM - icon tile grid                                                */
 /* ---------------------------------------------------------------------- */
 
 .tile-grid {
@@ -468,7 +468,7 @@ section { padding: 100px 24px; }
 }
 
 /* ---------------------------------------------------------------------- */
-/* What Would You Actually Save — calculator                               */
+/* What Would You Actually Save - calculator                               */
 /* ---------------------------------------------------------------------- */
 
 .calc-panel {
@@ -612,7 +612,7 @@ section { padding: 100px 24px; }
 }
 
 /* ---------------------------------------------------------------------- */
-/* Pricing — services page                                                 */
+/* Pricing - services page                                                 */
 /* ---------------------------------------------------------------------- */
 
 .pricing-wrap { max-width: 760px; }
@@ -678,7 +678,7 @@ section { padding: 100px 24px; }
 }
 
 .pricing-definition li::before {
-  content: "—";
+  content: "•";
   position: absolute;
   left: 0;
   color: var(--gold-soft);
@@ -735,7 +735,7 @@ section { padding: 100px 24px; }
 }
 
 /* ---------------------------------------------------------------------- */
-/* Cost of Capacity — comparison table                                     */
+/* Cost of Capacity - comparison table                                     */
 /* ---------------------------------------------------------------------- */
 
 .compare-wrap {
@@ -812,7 +812,7 @@ section { padding: 100px 24px; }
   max-width: 620px;
 }
 
-/* Cost of Capacity table — stacked cards on mobile instead of horizontal scroll */
+/* Cost of Capacity table - stacked cards on mobile instead of horizontal scroll */
 @media (max-width: 640px) {
   .compare-wrap { overflow-x: visible; border: none; border-radius: 0; }
   .compare-table { min-width: 0; }
@@ -850,7 +850,7 @@ section { padding: 100px 24px; }
 }
 
 /* ---------------------------------------------------------------------- */
-/* Services — 2x3 card grid                                                */
+/* Services - 2x3 card grid                                                */
 /* ---------------------------------------------------------------------- */
 
 .services-grid {
@@ -893,7 +893,7 @@ section { padding: 100px 24px; }
 }
 
 /* ---------------------------------------------------------------------- */
-/* Who We Work With — pills                                                */
+/* Who We Work With - pills                                                */
 /* ---------------------------------------------------------------------- */
 
 .pill-row {
@@ -954,7 +954,7 @@ section { padding: 100px 24px; }
 }
 
 /* ---------------------------------------------------------------------- */
-/* Trust strip — honest credibility signals in place of testimonials       */
+/* Trust strip - honest credibility signals in place of testimonials       */
 /* ---------------------------------------------------------------------- */
 
 .trust-strip { background: var(--navy-deep); padding: 72px 24px; }
@@ -1202,7 +1202,7 @@ section { padding: 100px 24px; }
 #why, #what, #who { scroll-margin-top: 90px; }
 
 /* ---------------------------------------------------------------------- */
-/* Who We Serve — audience detail rows                                     */
+/* Who We Serve - audience detail rows                                     */
 /* ---------------------------------------------------------------------- */
 
 .audience-detail {
@@ -1232,7 +1232,7 @@ section { padding: 100px 24px; }
 }
 
 /* ---------------------------------------------------------------------- */
-/* Contact page — who you'll be talking to                                 */
+/* Contact page - who you'll be talking to                                 */
 /* ---------------------------------------------------------------------- */
 
 .who-panel-wrap { max-width: 680px; margin: 0 auto; }
@@ -1460,7 +1460,7 @@ section { padding: 100px 24px; }
 }
 
 /* ---------------------------------------------------------------------- */
-/* Insights — hub grid                                                    */
+/* Insights - hub grid                                                    */
 /* ---------------------------------------------------------------------- */
 
 .insight-grid {
@@ -1527,7 +1527,7 @@ section { padding: 100px 24px; }
 .insight-card:hover .insight-meta .read-link { color: var(--gold); }
 
 /* ---------------------------------------------------------------------- */
-/* Insights — article page                                                */
+/* Insights - article page                                                */
 /* ---------------------------------------------------------------------- */
 
 .article-meta {
@@ -1602,7 +1602,7 @@ section { padding: 100px 24px; }
 .article-bio a { color: var(--navy-text); font-weight: 600; border-bottom: 1px solid var(--gold); }
 
 /* ---------------------------------------------------------------------- */
-/* Nav — Services hover dropdown                                          */
+/* Nav - Services hover dropdown                                          */
 /* ---------------------------------------------------------------------- */
 
 .nav-item {

@@ -1,4 +1,4 @@
-// HSM Strategic — shared site behavior
+// HSM Strategic - shared site behavior
 
 document.addEventListener('DOMContentLoaded', function () {
   var header = document.querySelector('.site-header');
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Scroll reveal — progressive enhancement only. Elements are visible by
+  // Scroll reveal - progressive enhancement only. Elements are visible by
   // default (see .reveal in CSS); we opt them into the hidden starting
   // state (.reveal-init) only once we know IntersectionObserver can bring
   // them back, so a slow/broken/disabled script never leaves content stuck
