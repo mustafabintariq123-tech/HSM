@@ -1173,6 +1173,64 @@ section { padding: 100px 24px; }
   margin: 0 auto;
 }
 
+.jump-links {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.jump-links a {
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cream);
+  text-decoration: none;
+  border-bottom: 2px solid rgba(201, 166, 89, 0.4);
+  padding-bottom: 4px;
+  transition: border-color 0.2s var(--ease), color 0.2s var(--ease);
+}
+
+.jump-links a:hover {
+  color: var(--gold-soft);
+  border-color: var(--gold);
+}
+
+#why, #what, #who { scroll-margin-top: 90px; }
+
+/* ---------------------------------------------------------------------- */
+/* Who We Serve — audience detail rows                                     */
+/* ---------------------------------------------------------------------- */
+
+.audience-detail {
+  padding: 44px 0;
+  border-bottom: 1px solid #E4E1D8;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.audience-detail:last-child { border-bottom: none; }
+
+.audience-detail h3 {
+  font-size: 20px;
+  color: var(--navy-text);
+}
+
+.audience-detail p {
+  color: #5B6472;
+  font-weight: 300;
+  max-width: 620px;
+}
+
+@media (max-width: 720px) {
+  .audience-detail { grid-template-columns: 1fr; gap: 12px; }
+}
+
 /* ---------------------------------------------------------------------- */
 /* Contact page specifics                                                  */
 /* ---------------------------------------------------------------------- */
