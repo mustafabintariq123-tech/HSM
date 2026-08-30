@@ -405,6 +405,63 @@ section { padding: 100px 24px; }
 }
 
 /* ---------------------------------------------------------------------- */
+/* Engagement steps - "How An Engagement Works"                            */
+/* ---------------------------------------------------------------------- */
+
+.engagement-steps {
+  border: 1px solid #E4E1D8;
+  border-radius: 2px;
+  margin-top: 40px;
+}
+
+.engagement-step {
+  display: flex;
+  gap: 20px;
+  padding: 26px 32px;
+  border-bottom: 1px solid #E4E1D8;
+}
+
+.engagement-step:last-child { border-bottom: none; }
+
+.engagement-step-n {
+  flex: 0 0 auto;
+  width: 32px;
+  height: 32px;
+  border: 1.5px solid var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--gold);
+  font-size: 14px;
+}
+
+.engagement-step-t {
+  font-size: 16px;
+  color: var(--navy-text);
+  margin-bottom: 6px;
+}
+
+.engagement-step-d {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #5B6472;
+  font-weight: 300;
+}
+
+.engagement-steps-note {
+  font-size: 13px;
+  color: var(--gray);
+  margin-top: 16px;
+}
+
+@media (max-width: 560px) {
+  .engagement-step { padding: 20px 22px; gap: 14px; }
+}
+
+/* ---------------------------------------------------------------------- */
 /* Why HSM - icon tile grid                                                */
 /* ---------------------------------------------------------------------- */
 
