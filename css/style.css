@@ -1232,6 +1232,84 @@ section { padding: 100px 24px; }
 }
 
 /* ---------------------------------------------------------------------- */
+/* Contact page — who you'll be talking to                                 */
+/* ---------------------------------------------------------------------- */
+
+.who-panel-wrap { max-width: 680px; margin: 0 auto; }
+
+.who-panel {
+  background: var(--navy);
+  border: 1px solid rgba(201, 166, 89, 0.25);
+  border-radius: 2px;
+  padding: 40px;
+  margin-top: 8px;
+}
+
+.who-top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.who-avatar {
+  flex: 0 0 auto;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 1.5px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--gold-soft);
+  background: var(--navy-deep);
+}
+
+.who-name-block h2 {
+  font-size: 22px;
+  margin: 0 0 4px 0;
+  color: var(--cream);
+}
+
+.who-name-block .who-role {
+  font-size: 13px;
+  color: var(--gray);
+}
+
+.who-body p {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--cream);
+  margin: 0 0 16px 0;
+}
+
+.who-body p:last-child { margin-bottom: 0; }
+
+.who-footer-links {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(254, 250, 229, 0.12);
+}
+
+.who-footer-links a {
+  font-size: 13px;
+  color: var(--gold-soft);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(201, 166, 89, 0.5);
+}
+
+@media (max-width: 480px) {
+  .who-panel { padding: 26px; }
+  .who-top { flex-wrap: wrap; }
+}
+
+/* ---------------------------------------------------------------------- */
 /* Contact page specifics                                                  */
 /* ---------------------------------------------------------------------- */
 
