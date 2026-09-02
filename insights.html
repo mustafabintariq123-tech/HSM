@@ -95,6 +95,28 @@
   <p>Notes from the deal desk on underwriting, market structure, and the diligence questions that actually move a thesis.</p>
 </section>
 
+<!-- Newsletter Signup -->
+<section class="section-off-white">
+  <div class="container">
+    <div class="newsletter-panel reveal">
+      <div class="newsletter-copy">
+        <h3>Get the next one in your inbox</h3>
+        <p>One email, roughly monthly. The same underwriting and diligence notes published here, before we write the next one. No recycled content, no drip sequence.</p>
+      </div>
+      <form class="newsletter-form" data-web3forms action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="3b037342-198b-4e6d-bd65-991a815978eb">
+        <input type="hidden" name="subject" value="New Insights newsletter signup (top of page)">
+        <input type="hidden" name="from_name" value="hsmstrategic.com">
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+        <input type="email" name="email" placeholder="you@firm.com" required>
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+        <p class="newsletter-status" role="status"></p>
+      </form>
+    </div>
+    <p class="newsletter-fineprint">No spam, unsubscribe anytime.</p>
+  </div>
+</section>
+
 <section class="section-white">
   <div class="container">
     <div class="insight-grid">
@@ -218,6 +240,19 @@
       </a>
 
     </div>
+
+    <div class="newsletter-inline reveal">
+      <span class="newsletter-inline-label">Didn't want to miss the next one?</span>
+      <form class="newsletter-form newsletter-form-inline" data-web3forms action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="3b037342-198b-4e6d-bd65-991a815978eb">
+        <input type="hidden" name="subject" value="New Insights newsletter signup (bottom of page)">
+        <input type="hidden" name="from_name" value="hsmstrategic.com">
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+        <input type="email" name="email" placeholder="you@firm.com" required>
+        <button type="submit" class="btn btn-primary">Subscribe &rarr;</button>
+        <p class="newsletter-status" role="status"></p>
+      </form>
+    </div>
   </div>
 </section>
 
@@ -267,5 +302,48 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script>
+(function () {
+  var forms = document.querySelectorAll('form[data-web3forms]');
+  forms.forEach(function (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var status = form.querySelector('.newsletter-status');
+      var button = form.querySelector('button[type="submit"]');
+      var input = form.querySelector('input[type="email"]');
+      var originalLabel = button.textContent;
+
+      status.textContent = '';
+      status.removeAttribute('data-state');
+      button.disabled = true;
+      button.textContent = 'Sending...';
+
+      fetch(form.action, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form),
+      })
+        .then(function (res) { return res.json(); })
+        .then(function (data) {
+          if (data.success) {
+            status.textContent = "You're on the list. Thanks for subscribing.";
+            status.setAttribute('data-state', 'ok');
+            input.value = '';
+            button.textContent = originalLabel;
+            button.disabled = true;
+          } else {
+            throw new Error(data.message || 'Submission failed');
+          }
+        })
+        .catch(function () {
+          status.textContent = "Something went wrong, please try again or email mustafa@hsmstrategic.com directly.";
+          status.setAttribute('data-state', 'error');
+          button.disabled = false;
+          button.textContent = originalLabel;
+        });
+    });
+  });
+})();
+</script>
 </body>
 </html>
