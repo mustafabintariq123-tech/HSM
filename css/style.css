@@ -1896,3 +1896,103 @@ section { padding: 100px 24px; }
   .newsletter-inline { flex-direction: column; text-align: center; }
   .newsletter-form-inline { flex-wrap: wrap; }
 }
+
+/* ---------------------------------------------------------------------- */
+/* Case Studies / Sectors / FAQ / Legal - shared prose components         */
+/* ---------------------------------------------------------------------- */
+
+.case-studies, .faq, .legal {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.case-study, .sector {
+  padding: 40px 0;
+  border-top: 1px solid #E4E1D8;
+}
+
+.case-study:first-child, .sector:first-child { border-top: none; padding-top: 0; }
+
+.case-tag {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+
+.case-study h2, .sector h2 {
+  font-size: 23px;
+  color: var(--navy-text);
+  margin-bottom: 16px;
+}
+
+.case-study h3, .sector h3, .faq h3 {
+  font-size: 15px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--navy-text);
+  margin: 22px 0 10px;
+}
+
+.case-study p, .sector p, .faq p, .legal p {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--charcoal);
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+
+.case-study ul, .sector ul, .legal ul {
+  margin: 0 0 14px 0;
+}
+
+.case-study li, .sector li, .legal li {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--charcoal);
+  line-height: 1.75;
+  padding-left: 18px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.case-study li::before, .sector li::before, .legal li::before {
+  content: "\2022";
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+}
+
+.legal li strong { color: var(--navy-text); }
+
+.faq h2 {
+  font-size: 21px;
+  color: var(--navy-text);
+  margin: 44px 0 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #E4E1D8;
+}
+
+.faq h2:first-child { margin-top: 0; }
+
+.faq h3 { margin-top: 30px; }
+
+.legal h2 {
+  font-size: 20px;
+  color: var(--navy-text);
+  margin: 40px 0 14px;
+}
+
+.legal h2:first-child { margin-top: 0; }
+
+.legal > p:first-of-type { margin-bottom: 30px; }
+
+.founder-links {
+  margin-top: 18px;
+  font-size: 15px;
+  color: #5B6472;
+}
+
+.founder-links a { color: var(--navy-text); font-weight: 600; border-bottom: 1px solid var(--gold); }
